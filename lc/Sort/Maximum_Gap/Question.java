@@ -24,7 +24,7 @@ public class Question {
 	//bucket: http://blog.csdn.net/u012162613/article/details/41936569
 	//radix: http://yucoding.blogspot.com/2014/12/leetcode-question-maximum-gap.html
     public int maximumGap(int[] num) {
-    	if (num == null || num.length == 0) {
+    	if (num == null || num.length <= 1) {
     		return 0;
     	}
     	int min = Integer.MAX_VALUE;
@@ -41,7 +41,7 @@ public class Question {
     	}
     	for (int val : num) {
     		int idx = (val - min) / bkSize;
-    		if (!bks.get(idx).isEmpty()) {
+    		if (!bks.get(idx).isEmpty()) {//【注】只需记录每个桶内的最小值和最大值即可
     			bks.get(idx).set(0, Math.min(val, bks.get(idx).get(0))); //local min
     			bks.get(idx).set(1, Math.max(val, bks.get(idx).get(1))); // local max
     		} else {
@@ -50,7 +50,7 @@ public class Question {
     		}
     	}
     	int preIdx = 0;
-    	int gap = num.length == 1 ?  0 : (max - min) / (num.length - 1);
+    	int gap = (max - min) / (num.length - 1);
     	for (int i = 1; i < bkCount; i++) {
     		if (bks.get(i).isEmpty()) {
     			continue;

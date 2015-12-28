@@ -37,6 +37,9 @@ public class Question {
 	 * You should return the indices: [0,9]. (order does not matter).
 	 */
 	
+	
+	//【注】当前方法效率低下，时间复杂度为O(wordLen * L.length * S.length())
+	//有时间重写，可参考：http://blog.csdn.net/linhuanmars/article/details/20342851  时间复杂度为O(S.length())
 	//手写
 	public ArrayList<Integer> findSubstring(String S, String[] L) {
 		ArrayList<Integer> result = new ArrayList<Integer>();
@@ -57,7 +60,7 @@ public class Question {
 			HashMap<String, Integer> matchMap = new HashMap<String, Integer>(aimMap); // 从matchMap中依次减去
 			for (int j = i; j <= S.length() - wordLen; j += wordLen) { // j标记当前word的起始index, j的边界也要画图为好
 				String curWord = S.substring(j, j + wordLen);
-				if (!aimMap.containsKey(curWord) || !matchMap.containsKey(curWord)) {
+				if (!matchMap.containsKey(curWord)) {
 					break;
 				}
 				if (matchMap.get(curWord) > 0) {

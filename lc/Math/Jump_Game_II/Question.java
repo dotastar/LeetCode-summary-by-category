@@ -27,6 +27,7 @@ public class Question {
 	 * to the last index.)
 	 */
 	
+	//其实是two pointer问题
 	//Greedy
 	//http://www.cnblogs.com/yuzhangcmu/p/4148858.html
 	//O(n^2)时间复杂度，O(1)空间复杂度。
@@ -39,7 +40,7 @@ public class Question {
 		int len = nums.length;
 		int step = 0;
 		int maxReach = nums[0];
-		while (l <= r && r < len - 1) { //【注】如果l > r 表示本轮maxReach未增加，这样下一轮的i就无法到达，则该直接返回异常。
+		while (l <= r && r <= len - 1) { //【注】如果l > r 表示本轮maxReach未增加，这样下一轮的i就无法到达，则该直接返回异常。
 			step++; // 每增加1轮就 多跳1步
 			for (int i = l; i <= r; i++) { // 找到本轮的maxReach
 				maxReach = Math.max(maxReach, nums[i] + i);

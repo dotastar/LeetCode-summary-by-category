@@ -27,17 +27,17 @@ public class Question {
 	 * beyond the new length.
 	 */
 	
-	//相当于有两个pointer， i和len：i从左往右，len从右往左，直到相遇。
+	//相当于有两个pointer， i和end：i从左往右，end从右往左，直到相遇。
 	//http://blog.csdn.net/linhuanmars/article/details/19965351
     public int removeElement(int[] A, int elem) {
 		if (A == null || A.length == 0) {
 			return 0;
 		}
-		int len = A.length - 1; // len从右往左扫 
-		for (int i = 0; i <= len; i++) { // i和len相遇才能停，因为i负责检查该位是否为element
-    		while (A[i] == elem && i <= len) { //只要A[i]==elem, 就用A[len]值来replace A[i]值,并一直检查i是否仍然<=len
-    			A[i] = A[len--];     		}
+		int end = A.length - 1; // len从右往左扫 
+		for (int i = 0; i <= end; i++) { // 【注】i和end“相离”才结束，每发现一个element，end就往左移动一个。
+    		while (A[i] == elem && i <= end) { //只要A[i]==elem, 就用A[end]值来replace A[i]值,并一直检查i是否仍然<=end
+    			A[i] = A[end--];     		}
     	}
-    	return len + 1; //len最终所在位置， 是值不同于element的最右一个数。所以len + 1即为数组长度 
+    	return end + 1; //end最终所在位置， 是值不同于element的最右一个数。所以end + 1即为数组长度 
     }
 }

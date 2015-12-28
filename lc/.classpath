@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="lintcode"/>
-	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Array"/>
 	<classpathentry kind="src" path="Backtracking"/>
 	<classpathentry kind="src" path="Binary_Search"/>
@@ -11,6 +10,7 @@
 	<classpathentry kind="src" path="DP_Matrix"/>
 	<classpathentry kind="src" path="Graph"/>
 	<classpathentry kind="src" path="HashMap"/>
+	<classpathentry kind="src" path="Heap"/>
 	<classpathentry kind="src" path="High_Accuracy"/>
 	<classpathentry kind="src" path="LinkedList"/>
 	<classpathentry kind="src" path="Math"/>
@@ -23,8 +23,10 @@
 	<classpathentry kind="src" path="Tree_Nature"/>
 	<classpathentry kind="src" path="Tree_Sum"/>
 	<classpathentry kind="src" path="Tree_Traversal"/>
+	<classpathentry kind="src" path="Trie"/>
 	<classpathentry kind="src" path="Two_Pointers"/>
 	<classpathentry kind="src" path="Leetcode_New_Questions"/>
+	<classpathentry kind="src" path="Prep_Interview"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

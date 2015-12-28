@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
+
 public class Question {
 
 	/**
@@ -13,8 +14,43 @@ public class Question {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-		System.out.println(result.size());
+		/**
+
+		        _______6______
+		       /              \
+		    ___2__          ___8__
+		   /      \        /      \
+		   0      _4       7       9
+		         /  \
+		         3   5
+
+		 */
+		TreeNode t6 = new TreeNode(6);
+		TreeNode t2 = new TreeNode(2);
+		TreeNode t8 = new TreeNode(8);
+		TreeNode t0 = new TreeNode(0);
+		TreeNode t4 = new TreeNode(4);
+		TreeNode t7 = new TreeNode(7);
+		TreeNode t9 = new TreeNode(9);
+		TreeNode t3 = new TreeNode(3);
+		TreeNode t5 = new TreeNode(5);
+		
+		t6.left = t2;
+		t6.right =t8;
+		t2.left = t0;
+		t2.right =t4;
+		t4.left = t3;
+		t4.right =t5;
+		t8.left = t7;
+		t8.right =t9;
+		Question q = new Question();
+		List<List<Integer>> result = q.zigzagLevelOrder(t6);
+		for (List<Integer> item : result) {
+			for (int i : item) {
+				System.out.print(i + ",");
+			}
+			System.out.println("");
+		}
 
 	}
 
@@ -53,14 +89,14 @@ public class Question {
 			for (int i = 0; i < size; i++) { 
 				TreeNode node = q.poll();
 				item.add(node.val);// 当前node值加入item
-				if (node.right != null) {
-					q.offer(node.right);
-				}
 				if (node.left != null) {
 					q.offer(node.left);
 				}
+				if (node.right != null) {
+					q.offer(node.right);
+				}
 			}
-			if (isEven) {
+			if (!isEven) {
 				Collections.reverse(item);
 			}
 			result.add(item);

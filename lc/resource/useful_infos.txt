@@ -124,9 +124,179 @@ useful links:
 	
 28. 报F和G的offer，分享面经和准备经验（干货）
 	http://www.mitbbs.com/article_t/JobHunting/32984309.html
+	准备面试篇，无干货
+	http://www.mitbbs.com/article_t/JobHunting/32990199.html
 	
 29 database ACID example
 	http://stackoverflow.com/questions/999394/whats-a-real-world-example-of-acid
 	
 30 几何题（search Geometry）
 	https://www.topcoder.com/community/data-science/data-science-tutorials/
+	
+31. 一亩三分地 面经
+	http://www.1point3acres.com/bbs/forum.php?mod=forumdisplay&fid=145&filter=author&orderby=dateline&sortid=311
+	内推
+	http://www.1point3acres.com/bbs/forum.php?mod=forumdisplay&fid=198&filter=author&orderby=dateline&sortid=192
+	
+32 米群网：
+	http://www.meetqun.com/forum-36-1.html
+	
+33. google 特殊要准备的 概率题。sampling, shuttle（洗牌），都是以算法的形式考，要写代码。
+
+34. 关于lock
+	https://www.youtube.com/watch?v=TVkQ1VeRKt4&list=PLrRW1w6CGAcXbMtDFj205vALOGmiRc82-&index=39
+	
+35. houzz 面经
+	http://www.mitbbs.com/article_t/Recommend/31399593.html
+	houzz面筋：
+	Q1: print out prime factors. e.g., 20=2x2x5, 90=2x3x3x5
+	How to get a list of prime numbers
+	Q2: LRU. How to implement linkedHashtable
+	Q3: draw architectural picture for a typical web stack.
+	Q4: implement thread pool
+	
+	http://www.1point3acres.com/bbs/thread-101758-1-1.html
+	1. two sum, 电面用 hashset，onstie 又考了一遍用两种方法做
+	2. 分解质因数
+	3. shift array (shifts an array by N number of steps. E.g. [0,1,2,3,4] shiftArray(arr, 3) -> [2,3,4,0,1])
+	4. search in rotated array
+	5. valid BST. 我刚说完思路面试官就说我知道是对的你不用写代码了⊙▽⊙. 1point3acres.com/bbs
+	6. database design + SQL
+	7. fib, 非要让我不用 temp 和不能多用两个数……. From 1point 3acres bbs
+	8. edit distance，本来想背dp答案的，结果没等我开口给我简化了并让我用 recursion 写
+	9. 前端基础
+	
+	http://www.1point3acres.com/bbs/thread-121913-1-1.html
+	算法两道：
+	1. Calculate the distance of bits between two integers. 
+	For example: 1 -> 01; 2 -> 10; dist = 2;
+	2. Fibonacci, recursive + non recursive;
+	recursive and iterative: http://www.programcreek.com/2012/10/iteration-vs-recursion-in-java/
+	然后都问了下时间空间复杂度。
+	recursive 时间2^n(即exponential time)，空间n
+								时间 http://stackoverflow.com/questions/360748/computational-complexity-of-fibonacci-sequence
+								空间 http://www.quora.com/What-is-the-space-complexity-of-a-recursive-fibonacci-function
+	iterative:
+	
+	其他内容：
+	HashMap vs HashTable;(http://javahungry.blogspot.com/2014/03/hashmap-vs-hashtable-difference-with-example-java-interview-questions.html)
+	Design Database tabe;
+	简历随意走了一下;
+	HTTP Request: GET vs. POST vs. PUT，能不能互相换着用。( http://jingxin.me/blog/blog/2013/01/30/get-post-put-delete-sha-sha-fen-bu-qing-chu/ )
+	Java vs JavaScript. 以及各自如何实现OOP。
+	
+	与competitor的比较
+	http://blogs.wsj.com/venturecapital/2015/01/20/home-improvement-site-porch-com-lands-65m-to-build-out-its-services/
+	
+	流量统计
+	http://www.alexa.com/siteinfo/houzz.com#?
+	
+	http://www.quora.com/What-is-the-tech-stack-for-Houzz
+	
+	CSRF
+	https://en.wikipedia.org/wiki/Cross-site_request_forgery
+	https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0  (记住例子)
+	
+	http://www.glassdoor.com/GD/Interview/Houzz-Interview-Questions-E716331.htm?filter.jobTitleFTS=software+engineer
+	
+36. regex 
+	https://regex101.com/
+	
+37 relatinal db vs non-ralational db
+
+38 python interview questions:
+	http://www.careerride.com/python-interview-questions.aspx
+	http://www.bogotobogo.com/python/python_classes_instances.php#properties
+	http://www.ilian.io/python-interview-question-and-answers/
+	
+39. python tuple vs list:
+	http://stackoverflow.com/questions/626759/whats-the-difference-between-list-and-tuples
+	
+40. javascript interview:
+	http://career.guru99.com/top-85-javascript-interview-questions/
+	
+41. static vs dynamic vs strong vs weak vs duck typing
+	http://www.koffeinfrei.org/2012/03/19/static-vs-dynamic-vs-strong-vs-weak-vs-duck-typing
+	
+42. PEP 8 总结 
+	http://www.malike.net.cn/blog/2013/07/25/pep8-summary/
+	
+43. google 生产者消费者问题（可参考系统设计第四讲的slides里的链接）
+	http://www.mitbbs.com/article_t/JobHunting/33030297.html
+	
+44. software testing engineer interview question
+	http://www.indiabix.com/technical/software-testing/software-testing-basics/
+	
+45. What happens when you type a URL in browser 
+	http://edusagar.com/articles/view/70/What-happens-when-you-type-a-URL-in-browser
+	视频的前10分钟：  https://www.youtube.com/watch?v=8KuO4r5CHjM&list=PLtHNgNivKAzeeh2Q7h8VYgQOoJNhk8zgZ&index=2
+	
+46. python 快速入门
+	http://blog.jobbole.com/43922/ 
+	
+	
+47. EMC（RSA） 准备：
+	Selenium, C I tool--Continuous integration(Jenkins)
+	http://www.glassdoor.com/GD/Interview/RSA-Security-Interview-Questions-E3838.htm?sort.sortType=RD&sort.ascending=false&filter.jobTitleFTS=software
+	(1).They asked questions focused on Test Automation, Agile methodology and QA process along with few technical questions. 
+	I talked to RSA Director the day after and they offered
+	
+	回忆电面：
+	1.git vs svn
+	2.sql vs nosql
+	3.selenium
+	4.ajax
+	5.find grep ps top 
+	6.vi sed
+	7.jira- priority vs severity
+	8.jenkins
+	9.security (testing) knowledge
+	10. REST(ful) is stateful or stateless
+	
+	Web Application Security Testing Cheat Sheet
+	https://www.owasp.org/index.php/Web_Application_Security_Testing_Cheat_Sheet
+	
+	http protocol questions
+	http://www.globalguideline.com/interview_questions/Questions.php?sc=Hypertext_Transfer_Protocol_(HTTP)
+	
+	user-agent
+	http://www.whatsmyua.com/
+	https://developer.chrome.com/multidevice/user-agent
+	
+	websocket vs long polling(persistent connection)
+	http://www.zhihu.com/question/20215561
+	
+	
+48. k largest(or smallest) elements in an array | added Min Heap method
+	http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/	
+	
+49. Shuffle a given array
+	http://www.geeksforgeeks.org/shuffle-a-given-array/
+	cracking code 5th 18.2
+
+50  更多leetcode题目
+	http://bookshadow.com/leetcode/
+	http://sbzhouhao.net/LeetCode/	
+	
+51. 电梯设计题：
+	http://thought-works.blogspot.com/2012/11/object-oriented-design-for-elevator-in.html
+	http://www.shuatiblog.com/blog/2014/08/26/Design-OOD-elevator/
+	http://www.careercup.com/question?id=1808669
+	
+52. 多线程安全。java 7 non-blocking
+	读时候不锁，写时候锁。
+	
+53. Find the largest BST subtree in a given Binary Tree
+	http://www.geeksforgeeks.org/find-the-largest-subtree-in-a-tree-that-is-also-a-bst/
+	
+54. 如何使用LeetCode
+	http://blog.iamtao.me/2015/02/13/How-to-Use-LeetCode/
+	http://www.1point3acres.com/bbs/thread-79646-1-1.html
+	
+55. web testing
+	http://www.tutorialspoint.com/software_testing_dictionary/web_application_testing.htm
+	
+56. OO design 经典例子：停车场，扑克牌，电梯
+
+mac test~~!!~~
+	

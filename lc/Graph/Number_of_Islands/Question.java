@@ -39,7 +39,8 @@ public class Question {
 		Answer: 3
 	 */
 	
-	//
+	//如果不可以改变原数组的话，就需要一个bool used[m][n]的辅助矩阵。
+	//如果可以改变数组，则可以把所有已发现的陆地标记为‘2’， 然后最后再恢复为1.这样不需要额外空间，但是时间近似多一倍。
     public int numIslands(char[][] grid) {
     	if (grid == null || grid.length == 0 || grid[0].length == 0) {
     		return 0;
@@ -50,36 +51,33 @@ public class Question {
     	int res = 0;
     	for (int i = 0; i < m; i++) {
     		for (int j = 0; j < n; j++) {
-    			if (!used[i][j] && grid[i][j] == '1') {
+    			if (!used[i][j] && grid[i][j] == '1') { // 【注】每找到一个“陆地”，就开始做bfs穷尽和其相邻的陆地
     				used[i][j] = true;
-    				int pos = i * n + j;
+    				int pos = i * n + j; //【注】技巧：用一个int表示x，y的坐标
     				LinkedList<Integer> queue = new LinkedList<Integer>();
     				queue.offer(pos);
     				while (!queue.isEmpty()) {
-    					int size = queue.size();
-    					for (int k = 0; k < size; k++) {
-    						pos = queue.poll();
-    						int row = pos / n;
-    						int col = pos % n;
-    						if (row > 0 && !used[row - 1][col] && grid[row - 1][col] == '1') {
-    							queue.offer(pos - n); //【注】要减去一个列的长度
-    							used[row - 1][col] = true;
-    						}
-    						if (row < m - 1 && !used[row + 1][col] && grid[row + 1][col] == '1') {
-    							queue.offer(pos + n);
-    							used[row + 1][col] = true;
-    						}
-    						if (col > 0 && !used[row][col - 1] && grid[row][col - 1] == '1') {
-    							queue.offer(pos - 1);
-    							used[row][col - 1] = true;
-    						}
-    						if (col < n - 1 && !used[row][col + 1] && grid[row][col + 1] == '1') {
-    							queue.offer(pos + 1);
-    							used[row][col + 1] = true;
-    						}
-    					}
+						pos = queue.poll(); // 每次拿到一个位置pos, 然后根据pos 恢复出row和col，然后上下左右分别试探。
+						int row = pos / n;
+						int col = pos % n;
+						if (row > 0 && !used[row - 1][col] && grid[row - 1][col] == '1') { //可以往上走的三个条件：1往上走不越界；2上面一个没用过；3上面一个是陆地
+							queue.offer(pos - n); //【注】要减去“列数”
+							used[row - 1][col] = true; //该位置标记为访问过
+						}
+						if (row < m - 1 && !used[row + 1][col] && grid[row + 1][col] == '1') {
+							queue.offer(pos + n);
+							used[row + 1][col] = true;
+						}
+						if (col > 0 && !used[row][col - 1] && grid[row][col - 1] == '1') {
+							queue.offer(pos - 1);
+							used[row][col - 1] = true;
+						}
+						if (col < n - 1 && !used[row][col + 1] && grid[row][col + 1] == '1') {
+							queue.offer(pos + 1);
+							used[row][col + 1] = true;
+						}
     				}
-    				res++;
+    				res++; // 完成该块陆地的遍历。
     			}
     		}
     	}
